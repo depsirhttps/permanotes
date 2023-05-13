@@ -1,6 +1,8 @@
 {
-  "name": "thing",
+  "name": "permanotes",
+  "homepage": "http://untitledproject.online",
   "version": "0.1.0",
+  "description": "a thing",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
