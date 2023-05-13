@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import NewNote from './components/NewNote';
 
 function App() {
   return (
-    <div>broskie</div>
+    <div>
+      <NewNote/>
+    </div>
   );
 }
 
