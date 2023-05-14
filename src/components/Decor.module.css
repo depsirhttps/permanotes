@@ -1,7 +1,8 @@
 .decor {
   background-color: #eb98a7;
-  left: 80px;
-  width:1.5px;
+  left: 100px;
+  width:2px;
   height:100%;
+  top: 0;
   position: absolute;
 }

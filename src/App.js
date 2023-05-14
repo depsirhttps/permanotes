@@ -1,18 +1,25 @@
 import "./App.css";
-import Layout from "./Layout";
-import NewNote from "./components/NewNote";
+import Decor from "./components/Decor";
+import NotePage from "./components/NotePage";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+const entries = [
+  {
+    content: "hehe",
+  },
+  {
+    content: "to anyone reading this. u matter.",
+  },
+  {
+    content: "[racial slur here]",
+  }
+];
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/permanotes" element={<Layout />}>
-          
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Decor />
+      <NotePage content={entries}/>
+    </div>
   );
 }
 
