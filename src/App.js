@@ -1,11 +1,18 @@
 import "./App.css";
+import Layout from "./Layout";
 import NewNote from "./components/NewNote";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <NewNote/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/permanotes" element={<Layout />}>
+          
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
