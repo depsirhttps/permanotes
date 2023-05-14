@@ -1,11 +1,13 @@
-import './App.css';
-import NewNote from './components/NewNote';
+import "./App.css";
+import NewNote from "./components/NewNote";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Router basename={'/permanotes'}>
       <NewNote/>
-    </div>
+    </Router>
   );
 }
 
