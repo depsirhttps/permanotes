@@ -1,26 +1,43 @@
-import "./App.css";
-import Decor from "./components/Decor";
-import NotePage from "./components/NotePage";
+import React from "react";
+import LineDiv from "./components/LineDiv";
+import TextDiv from "./components/TextDiv";
 
-const entries = [
+const DUMMY_CONTENT = [
   {
-    content: "hehe",
+    msg: "bruh",
   },
   {
-    content: "to anyone reading this. u matter.",
+    msg: "hehe",
   },
   {
-    content: "[racial slur here]",
-  }
+    msg: "sex sex boobies",
+  },
+  {
+    msg: "rACIAL SLur",
+  },
+  {
+    msg: "u matter.",
+  },
+  {
+    msg: "jk",
+  },
+  {
+    msg: "bruh",
+  },
 ];
 
-function App() {
+var LINE_CONTENT = [
+  ...DUMMY_CONTENT,
+  ...DUMMY_CONTENT
+]
+
+const App = (props) => {
   return (
     <div>
-      <Decor />
-      <NotePage content={entries}/>
+      <LineDiv content={LINE_CONTENT} />
+      <TextDiv content={DUMMY_CONTENT}/>
     </div>
   );
-}
+};
 
 export default App;

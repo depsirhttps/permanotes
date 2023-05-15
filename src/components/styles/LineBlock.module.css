@@ -1,0 +1,7 @@
+.block{
+  background-color: white;
+  width: 100vw;
+  height: 50px;
+  box-sizing: border-box;
+  border-top: 2px solid #85c0c9;
+}
