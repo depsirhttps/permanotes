@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from './styles/Entry.module.css';
 
-const Line = (props) => {
-  return <p>{props.msg}</p>;
-};
-
 const Entry = (props) => {
+
+  const [numOfLines, setNumOfLines] = useState(0);
+  const msgId = props.id;
+
   return (
     <div>
-      <Line msg={props.msg}/>
+      <p id={msgId}>{props.msg}</p>
     </div>
   );
 };
