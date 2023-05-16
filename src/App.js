@@ -11,10 +11,10 @@ const DUMMY_CONTENT = [
     msg: "hehe",
   },
   {
-    msg: "sex sex boobies",
+    msg: "wdwd swdwdwex wdwwsadbb",
   },
   {
-    msg: "rACIAL SLur",
+    msg: "wuw",
   },
   {
     msg: "u matter.",
@@ -34,10 +34,18 @@ const App = (props) => {
 
   const [LINE_LENGTH, setLINE_LENGTH] = useState(LINE_CONTENT.length);
   const [isNew, setIsNew] = useState(true);
-  const [inputLines, setInputLines] = useState(1);
+  const [inputLines, setInputLines] = useState(0);
 
-  const changeLines = (iLines) => {
-    var numOfLines = iLines + 2;
+  const changeLines = (iLines, resizeEvent) => {
+    var numOfLines = 0;
+
+    if(isNew){
+      numOfLines = 2;
+    }
+
+    if(iLines){
+      numOfLines += iLines;
+    }
 
     for (let i = 1; i < DUMMY_CONTENT.length + 1; i++) {
       const el = document.getElementById(i.toString());
@@ -59,15 +67,11 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", changeLines(0));
-
-    return () => {
-      window.removeEventListener("resize", changeLines);
-    };
+    changeLines();
   }, []);
 
   const lineHandler = (lines) => {
-    changeLines(lines);
+    changeLines(lines - 1);
   };
 
   return (

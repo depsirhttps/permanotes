@@ -22,9 +22,26 @@ const NewEntry = (props) => {
     }
 
     var displayBottom = calculatedBottom.toString() + "px";
+    var color = '#7c7c7c';
+
+    const ar = event.target.innerHTML.split("<div>");
+    var numOfSpaces = 0;
+
+    console.log(ar);
+
+    for(let i = 0; i < ar.length; i++){
+      if(ar[i] === "<br></div>" || ar[i] === "<br>"){
+        numOfSpaces++;
+      }
+    }
+
+    if(numOfSpaces >= 1){
+      color="red";
+    }
 
     setStyle({
       bottom: displayBottom,
+      color: color
     });
 
     props.onInputLines(inputLinesReal);
