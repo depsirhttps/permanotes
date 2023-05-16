@@ -11,7 +11,7 @@ const TextDiv = (props) => {
     <div className={classes.container}>
       {props.content.map((entry) => {
         msgId++;
-        return <Entry msg={entry.msg} id={msgId.toString()} />;
+        return <Entry msg={entry.msg} key={msgId.toString()} id={msgId.toString()} />;
       })}
     </div>
   );

@@ -34,13 +34,10 @@ const App = (props) => {
 
   const [LINE_LENGTH, setLINE_LENGTH] = useState(LINE_CONTENT.length);
   const [isNew, setIsNew] = useState(true);
+  const [inputLines, setInputLines] = useState(1);
 
-  const changeLines = () => {
-    var numOfLines = 0;
-
-    if(isNew){
-      numOfLines = 2;
-    }
+  const changeLines = (iLines) => {
+    var numOfLines = iLines + 2;
 
     for (let i = 1; i < DUMMY_CONTENT.length + 1; i++) {
       const el = document.getElementById(i.toString());
@@ -62,21 +59,23 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    changeLines();
-    window.addEventListener("resize", changeLines);
+    window.addEventListener("resize", changeLines(0));
 
-    return (_) => {
+    return () => {
       window.removeEventListener("resize", changeLines);
     };
   }, []);
 
+  const lineHandler = (lines) => {
+    changeLines(lines);
+  };
+
   return (
     <div>
       <div>
-        <LineDiv isNew={isNew} content={LINE_CONTENT} />
+        <LineDiv onInputLines={lineHandler} content={LINE_CONTENT} />
         <TextDiv content={DUMMY_CONTENT} />
       </div>
-      <NewEntry />
     </div>
   );
 };
