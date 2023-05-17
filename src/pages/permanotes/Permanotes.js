@@ -84,18 +84,11 @@ const Permanotes = (props) => {
   useEffect(() => {
     window.addEventListener("pageshow", resizeHandler);
     window.addEventListener("resize", resizeHandler);
-
-    const keyboardDidHideListener = Keyboard.addListener(
-      'keyboardDidHide',
-      () => {
-        resizeHandler();
-      }
-    )
+    console.log(getInputLines);
 
     return (_) => {
       window.removeEventListener("resize", resizeHandler);
       window.removeEventListener("pageshow", resizeHandler);
-      keyboardDidHideListener.remove();
     };
   }, []);
 
