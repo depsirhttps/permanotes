@@ -6,25 +6,25 @@ import NewEntry from "./components/NewEntry";
 const Permanotes = (props) => {
   const [DUMMY_CONTENT, setDUMMY_CONTENT] = useState([
     {
-      msg: "bruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruh",
+      msg: "I hope I will be able to confide everything to you, as I have never been able to confide in anyone, and I hope you will be a great source of comfort and support.",
     },
     {
-      msg: "hehe",
+      msg: "I'll begin from the moment I got you, the moment I saw you lying on the table among my other birthday presents. (I went along when you were bought, but that doesn't count.)",
     },
     {
-      msg: "wdwd swdwdwex wdwwsadbb",
+      msg: "On Friday, June 12, I was awake at six o'clock, which isn't surprising, since it was my birthday. But I'm not allowed to get up at that hour, so I had to control my curiosity until quarter to seven. When I couldn't wait any longer, I went to the dining room, where Moortje (the cat) welcomed me by rubbing against my legs.",
     },
     {
-      msg: "wuw",
+      msg: "They gave me a beautiful book, Dutch Sasas and Lesends, but they gave me Volume II by mistake, so I exchanged two other books for Volume I. Aunt Helene brought me a puzzle, Aunt Stephanie a darling brooch and Aunt Leny a terrific book: Daisy Goes to the Mountains.",
     },
     {
-      msg: "u matter.",
+      msg: "the above were excerpts of anne frank's diary.",
     },
     {
-      msg: "jk",
+      msg: "these are dummy inputs",
     },
     {
-      msg: "bruh",
+      msg: "enter your own now! (cannot be more than 7 lines, cannot end with an empty line)",
     },
   ]);
 
