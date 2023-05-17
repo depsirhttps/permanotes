@@ -8,13 +8,17 @@ const NewEntry = (props) => {
   });
 
   const changeHandler = (event) => {
-    // console.log(event.target.innerHTML);
-    const inputEl = event.target;
-    const inputHeight = inputEl.offsetHeight;
-    const inputLines = inputHeight / 50;
 
-    const inputLinesReal = Math.round(inputLines);
-
+    var inputLinesReal = props.inputLines;
+    
+    if(event){
+      const inputEl = document.getElementById("INPUT_DIV");
+      const inputHeight = inputEl.offsetHeight;
+      const inputLines = inputHeight / 50;
+  
+      inputLinesReal = Math.round(inputLines);
+    }
+    
     var calculatedBottom = 99;
 
     if (inputLinesReal > 1) {
@@ -22,30 +26,32 @@ const NewEntry = (props) => {
     }
 
     var displayBottom = calculatedBottom.toString() + "px";
-    var color = '#7c7c7c';
+    var color = "#7c7c7c";
 
-    const ar = event.target.innerHTML.split("<div>");
-    var numOfSpaces = 0;
+    // const ar = event.target.innerHTML.split("<div>");
+    // var numOfSpaces = 0;
 
-    console.log(ar);
+    // for (let i = 0; i < ar.length; i++) {
+    //   if (ar[i] === "<br></div>" || ar[i] === "<br>") {
+    //     numOfSpaces++;
+    //   }
+    // }
 
-    for(let i = 0; i < ar.length; i++){
-      if(ar[i] === "<br></div>" || ar[i] === "<br>"){
-        numOfSpaces++;
-      }
-    }
-
-    if(numOfSpaces >= 1){
-      color="red";
-    }
+    // if (numOfSpaces >= 1) {
+    //   color = "red";
+    // }
 
     setStyle({
       bottom: displayBottom,
-      color: color
+      color: color,
     });
 
     props.onInputLines(inputLinesReal);
   };
+
+  useEffect(() => {
+    changeHandler(null)
+  }, [props.inputLines]);
 
   return (
     <div style={style} className={classes.container}>

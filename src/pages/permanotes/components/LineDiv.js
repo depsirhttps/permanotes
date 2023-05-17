@@ -21,7 +21,7 @@ const LineDiv = (props) => {
         return <LineBlock key={msgId.toString()}/>
       })}
 
-      <NewEntry onInputLines={lineHandler} />
+      <NewEntry inputLines={props.inputLines} onInputLines={lineHandler} />
     </div>
   );
 };
