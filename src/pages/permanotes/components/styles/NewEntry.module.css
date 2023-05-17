@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap");
 .container {
   z-index: 100;
   position: relative;
@@ -16,7 +15,7 @@ div[contenteditable] {
   background-color: transparent;
   height: 100%;
   width: 100%;
-  border:none;
+  border: none;
   border-radius: 3px;
   padding: 9px 0 0 0;
   box-sizing: border-box;
@@ -28,10 +27,57 @@ div[contenteditable] {
   line-height: 50px;
 }
 
-div[contenteditable]:focus{
+div[contenteditable]:focus {
   outline: none;
 }
 
-div[contenteditable]::placeholder{
-  color:#b5b5b5;
+.p {
+  color: #b5b5b5;
+  z-index: 30;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 18px 0 0 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  pointer-events: none;
+}
+
+.true {
+  z-index: 200;
+  position: absolute;
+  background-color: lightgreen;
+  border-radius: 5px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  bottom: 60px;
+  height: 40px;
+  width: fit-content;
+  padding: 5px 10px 0 10px;
+  font-weight: 600;
+  left: 100px;
+}
+
+.false {
+  z-index: 200;
+  position: absolute;
+  background-color: lightgreen;
+  border-radius: 5px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  bottom: 60px;
+  height: 40px;
+  width: fit-content;
+  padding: 5px 10px 0 10px;
+  font-weight: 600;
+  left: 100px;
+}
+
+.true:hover{
+  background-color: rgb(96, 198, 96);
+  cursor:grab;
 }

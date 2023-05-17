@@ -13,6 +13,10 @@ const LineDiv = (props) => {
 
   var msgId = 0;
 
+  const submitHandler = (text) => {
+    props.onSubmit(text);
+  }
+
   return (
     <div className={classes.container}>
       <VerticalLine />
@@ -21,7 +25,7 @@ const LineDiv = (props) => {
         return <LineBlock key={msgId.toString()}/>
       })}
 
-      <NewEntry inputLines={props.inputLines} onInputLines={lineHandler} />
+      {props.isNew && <NewEntry onSubmit={submitHandler} inputLines={props.inputLines} onInputLines={lineHandler} />}
     </div>
   );
 };

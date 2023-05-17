@@ -3,31 +3,31 @@ import LineDiv from "./components/LineDiv";
 import TextDiv from "./components/TextDiv";
 import NewEntry from "./components/NewEntry";
 
-const DUMMY_CONTENT = [
-  {
-    msg: "bruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruh",
-  },
-  {
-    msg: "hehe",
-  },
-  {
-    msg: "wdwd swdwdwex wdwwsadbb",
-  },
-  {
-    msg: "wuw",
-  },
-  {
-    msg: "u matter.",
-  },
-  {
-    msg: "jk",
-  },
-  {
-    msg: "bruh",
-  },
-];
-
 const Permanotes = (props) => {
+  const [DUMMY_CONTENT, setDUMMY_CONTENT] = useState([
+    {
+      msg: "bruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruhbruh",
+    },
+    {
+      msg: "hehe",
+    },
+    {
+      msg: "wdwd swdwdwex wdwwsadbb",
+    },
+    {
+      msg: "wuw",
+    },
+    {
+      msg: "u matter.",
+    },
+    {
+      msg: "jk",
+    },
+    {
+      msg: "bruh",
+    },
+  ]);
+
   const [LINE_CONTENT, setLINE_CONTENT] = useState([
     ...Array(DUMMY_CONTENT.length * 2),
   ]);
@@ -37,11 +37,14 @@ const Permanotes = (props) => {
   const [inputLines, setInputLines] = useState(1);
 
   const getInputLines = () => {
-    const inputEl = document.getElementById("INPUT_DIV");
-    const inputHeight = inputEl.offsetHeight;
-    const inputLines = inputHeight / 50;
-
-    const inputLinesReal = Math.round(inputLines);
+    var inputLinesReal = Math.round(inputLines);
+    if (!isNew) {
+      const inputEl = document.getElementById("INPUT_DIV");
+      const inputHeight = inputEl.offsetHeight;
+      const inputLines = inputHeight / 50;
+    } else {
+      inputLinesReal = 0;
+    }
     return inputLinesReal;
   };
 
@@ -93,10 +96,26 @@ const Permanotes = (props) => {
     changeLines(lines);
   };
 
+  const submitHandler = (text) => {
+    setDUMMY_CONTENT((prev) => [
+      ...prev,
+      {
+        msg: text,
+      },
+    ]);
+    setIsNew(false);
+  };
+
   return (
     <div>
       <div>
-        <LineDiv inputLines={inputLines} onInputLines={lineHandler} content={LINE_CONTENT} />
+        <LineDiv
+          isNew={isNew}
+          onSubmit={submitHandler}
+          inputLines={inputLines}
+          onInputLines={lineHandler}
+          content={LINE_CONTENT}
+        />
         <TextDiv content={DUMMY_CONTENT} />
       </div>
     </div>

@@ -9,7 +9,9 @@ const Entry = (props) => {
 
   return (
     <div>
-      <p id={msgId}>{props.msg}</p>
+      <p id={msgId}>
+        {props.msg}
+      </p>
     </div>
   );
 };
