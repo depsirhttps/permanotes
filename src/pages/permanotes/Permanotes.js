@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import LineDiv from "./components/LineDiv";
 import TextDiv from "./components/TextDiv";
 import NewEntry from "./components/NewEntry";
+import { Keyboard } from 'react-native';
 
 const Permanotes = (props) => {
   const [DUMMY_CONTENT, setDUMMY_CONTENT] = useState([
@@ -22,9 +23,6 @@ const Permanotes = (props) => {
     },
     {
       msg: "these are dummy inputs",
-    },
-    {
-      msg: "enter your own now! (cannot be more than 7 lines, cannot end with an empty line)",
     },
   ]);
 
@@ -84,13 +82,23 @@ const Permanotes = (props) => {
   };
 
   useEffect(() => {
-    resizeHandler();
+    window.addEventListener("pageshow", resizeHandler);
     window.addEventListener("resize", resizeHandler);
+
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        resizeHandler();
+      }
+    )
 
     return (_) => {
       window.removeEventListener("resize", resizeHandler);
+      window.removeEventListener("pageshow", resizeHandler);
+      keyboardDidHideListener.remove();
     };
   }, []);
+
 
   const lineHandler = (lines) => {
     changeLines(lines);
@@ -105,6 +113,10 @@ const Permanotes = (props) => {
     ]);
     setIsNew(false);
   };
+
+  const test = event => {
+    console.log(event);
+  }
 
   return (
     <div>
