@@ -1,0 +1,25 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input{
+  width: 600px;
+  height: 800px;
+  resize: none;
+  border: 1px solid #d3d4d4;
+  margin: 50px 0 50px 0;
+  padding: 98px 120px 120px 120px;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 45px;
+}
+
+.input::selection{
+  background-color: #bad3fc;
+}
+
+.input:focus{
+  outline: none;
+}
