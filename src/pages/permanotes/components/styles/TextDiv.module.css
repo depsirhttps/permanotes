@@ -1,9 +1,0 @@
-.container{
-  position: absolute;
-  margin-top: 130px;
-  margin-left: 90px;
-  background-color: transparent;
-  padding: 0 0 0 10px;
-  width: calc(100vw - 116.5px);
-  overflow-wrap: break-word;
-}

@@ -1,8 +1,0 @@
-.container {
-  margin-top: 130px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  /* background-color: grey; */
-  max-height: fit-content;
-}

@@ -1,12 +1,11 @@
 import React from "react";
-import Permanotes from "./pages/permanotes/Permanotes";
 import { Analytics } from "@vercel/analytics/react";
-import EssayThing from "./pages/essayThing/EssayThing";
+import TheLastWord from "./pages/TheLastWord/TheLastWord";
 
 const App = (props) => {
   return (
     <>
-      <EssayThing/>
+      <TheLastWord/>
       <Analytics />
     </>
   );
