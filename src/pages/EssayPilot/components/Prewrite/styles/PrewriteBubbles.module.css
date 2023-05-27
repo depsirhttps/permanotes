@@ -1,0 +1,9 @@
+.prewriteBubbles {
+  /* background-color: grey; */
+}
+
+.bubblesHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
