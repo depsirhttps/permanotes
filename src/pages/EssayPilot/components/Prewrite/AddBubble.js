@@ -3,21 +3,20 @@ import classes from "./styles/AddBubble.module.css";
 import { useState } from "react";
 
 const AddBubble = (props) => {
-  const [newIdea, setNewIdea] = useState("");
+  const [bubbleId, setBubbleId] = useState(1);
 
   const submitHandler = (event) => {
     event.preventDefault();
-
-    const text = event.target[0].value;
-
-    if (text.trim().length > 0) {
-      props.onNewIdea(text.trim());
-      setNewIdea("");
-    }
   };
 
   const changeHandler = (event) => {
-    setNewIdea(event.target.value);
+    const text = event.target.value;
+
+    if (text.trim().length > 0) {
+      props.onNewIdea(text.trim(), "bubble_" + bubbleId);
+      setBubbleId(prev => prev += 1);
+      event.target.value = "";
+    }
   };
 
   return (
@@ -26,7 +25,6 @@ const AddBubble = (props) => {
         onChange={changeHandler}
         type={props.type}
         placeholder={props.placeholder}
-        value={newIdea}
       />
     </form>
   );

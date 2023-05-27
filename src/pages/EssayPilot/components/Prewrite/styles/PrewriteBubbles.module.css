@@ -7,3 +7,11 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+.subBubblesHolder{
+  background-color: transparent;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}

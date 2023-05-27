@@ -1,0 +1,11 @@
+.arrow{
+  filter: invert(78%) sepia(0%) saturate(216%) hue-rotate(135deg) brightness(109%) contrast(78%);
+  height: 25px;
+  margin-bottom: 8px;
+}
+
+.subBubble{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
