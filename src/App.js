@@ -1,11 +1,11 @@
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
-import EssayPilot from "./pages/EssayPilot/EssayPilot";
+import MusicPlayer from "./pages/MusicPlayer/MusicPlayer";
 
 const App = (props) => {
   return (
     <>
-      <EssayPilot/>
+      <MusicPlayer/>
       <Analytics />
     </>
   );
