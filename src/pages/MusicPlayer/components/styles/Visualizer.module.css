@@ -1,0 +1,10 @@
+.visualizer{
+  height: 48px;
+  width: 100%;
+  /* background-color: grey; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 481px;
+}

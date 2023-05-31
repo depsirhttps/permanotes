@@ -1,0 +1,37 @@
+.progressBar{
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 534px;
+  display: flex;
+  justify-content: center;
+}
+
+.bar{
+  background-color: #BCBCBC;
+  width: 275px;
+  height: 100%;
+}
+
+.progressHolder{
+  /* background-color: grey; */
+  height: 2px;
+  width: 275px;
+  position: absolute;
+}
+
+.progress{
+  background-color: black;
+  width: 37%;
+  height: 2px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.circle{
+  background-color: black;
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+}
