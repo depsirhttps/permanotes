@@ -10,7 +10,7 @@ const Visualizer = (props) => {
       <div
         style={{
           backgroundColor: "#c4c4c4",
-          width: "11px",
+          flex: "1",
           height: `${calculatedSize * 100}%`,
         }}
       ></div>
@@ -19,9 +19,11 @@ const Visualizer = (props) => {
 
   return (
     <div className={classes.visualizer}>
-      {props.data.map((datum) => (
-        <Bar size={datum.size} />
-      ))}
+      <div className={classes.barsHolder}>
+        {props.data.map((datum) => (
+          <Bar size={datum.size} />
+        ))}
+      </div>
     </div>
   );
 };

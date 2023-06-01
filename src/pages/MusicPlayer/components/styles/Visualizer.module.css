@@ -1,4 +1,4 @@
-.visualizer{
+.visualizer {
   height: 6%;
   width: 100%;
   /* background-color: grey; */
@@ -6,5 +6,13 @@
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  top: 60.125%;
+  top: 63.125%;
+}
+
+.barsHolder {
+  width: 76.3888888889%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
