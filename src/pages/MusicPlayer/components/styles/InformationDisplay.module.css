@@ -6,14 +6,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 129px;
+  top: 16.125%;
   margin-left: auto;
   width: 100%;
   position: absolute;
 }
 
 .thumbnail{
-  width: 275px;
+  width: 76.3888888889%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-bottom: 12px;
 }
@@ -21,14 +21,14 @@
 .title{
   font-size: 20px;
   /* background-color: white; */
-  width: 275px;
+  width: 76.3888888889%;
   margin: 0;
   font-family: 'Ubuntu';
 }
 
 .artist{
   font-size: 14px;
-  width: 275px;
+  width: 76.3888888889%;
   margin: 0;
   font-family: 'Ubuntu';
 }

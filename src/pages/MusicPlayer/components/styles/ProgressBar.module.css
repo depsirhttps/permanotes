@@ -1,26 +1,28 @@
-.progressBar{
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.progressBar {
   height: 2px;
   width: 100%;
   position: absolute;
-  top: 534px;
+  top: 66.75%;
   display: flex;
   justify-content: center;
 }
 
-.bar{
-  background-color: #BCBCBC;
-  width: 275px;
+.bar {
+  background-color: #bcbcbc;
+  width: 76.3888888889%;
   height: 100%;
 }
 
-.progressHolder{
+.progressHolder {
   /* background-color: grey; */
   height: 2px;
-  width: 275px;
+  width: 76.3888888889%;
   position: absolute;
 }
 
-.progress{
+.progress {
   background-color: black;
   width: 37%;
   height: 2px;
@@ -29,9 +31,26 @@
   align-items: center;
 }
 
-.circle{
+.circle {
   background-color: black;
   height: 6px;
   width: 6px;
   border-radius: 6px;
+}
+
+.timeHolder {
+  /* background-color: grey; */
+  position: absolute;
+  width: 76.3888888889%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.timeHolder p {
+  margin: 0;
+  font-family: "Ubuntu";
+  font-size: 12px;
 }

@@ -3,6 +3,7 @@ import classes from "./MusicPlayer.module.css";
 import InformationDisplay from "./components/InformationDisplay";
 import Visualizer from "./components/Visualizer";
 import ProgressBar from "./components/ProgressBar";
+import ControlPanel from "./components/ControlPanel";
 
 const data = [
   {
@@ -88,6 +89,7 @@ const MusicPlayer = (props) => {
       <InformationDisplay />
       <Visualizer data={data} />
       <ProgressBar/>
+      <ControlPanel/>
     </div>
   );
 };
