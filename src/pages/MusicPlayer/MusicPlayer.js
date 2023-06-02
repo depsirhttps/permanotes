@@ -1,94 +1,16 @@
 import React from "react";
 import classes from "./MusicPlayer.module.css";
-import InformationDisplay from "./components/InformationDisplay";
-import Visualizer from "./components/Visualizer";
-import ProgressBar from "./components/ProgressBar";
-import ControlPanel from "./components/ControlPanel";
-
-const data = [
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-  {
-    size: Math.max(10, Math.floor(Math.random() * 100)),
-  },
-];
+import CurrentlyPlaying from "./components/Homepage/CurrentlyPlaying";
+import SongInfo from "./components/Homepage/SongInfo";
+import Visualizer from "./components/Homepage/Visualizer";
+import ControlPanel from "./components/Homepage/ControlPanel";
 
 const MusicPlayer = (props) => {
   return (
     <div className={classes.musicPlayer}>
-      <InformationDisplay />
-      <Visualizer data={data} />
-      <ProgressBar/>
+      <CurrentlyPlaying/>
+      <SongInfo/>
+      <Visualizer/>
       <ControlPanel/>
     </div>
   );
