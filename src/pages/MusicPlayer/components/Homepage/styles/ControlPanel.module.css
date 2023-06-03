@@ -1,6 +1,99 @@
-.controlPanel{
-  height: 137px;
+.controlPanel {
+  height: auto;
   width: 275px;
   margin-top: 1px;
-  background-color: grey;
+  display: flex;
+  /* background-color: black; */
+  flex-direction: column;
+}
+
+.timeStamps {
+  /* background-color: grey; */
+  height: 14px;
+  width: 100%;
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currentTime {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+.endingTime {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.topRow{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev, .skip{
+  height: 33px;
+  width: 33px;
+}
+
+.heart{
+  margin-right: 13px;
+}
+
+.loop{
+  margin-left: 13px;
+}
+
+.controlPanel button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.controlPanel button img{
+  height: 100%;
+}
+
+.play{
+  height: 60px;
+  width: 60px;
+}
+
+.bottomRow{
+  width: 100%;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.heart{
+  height: 30px;
+  width: 30px;
+  /* background-color: grey; */
+}
+
+.loop{
+  height: 35px;
+  width: 30px;
+}
+
+.share{
+  height: 30px;
+  width: 30px;
+}
+
+.more{
+  height: 37px;
+  width: 30px;
 }

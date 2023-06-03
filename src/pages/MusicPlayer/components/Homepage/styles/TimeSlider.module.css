@@ -1,0 +1,30 @@
+.container{
+  /* background-color: grey; */
+  height:6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sliderBG{
+  height: 2px;
+  width: 100%;
+  background-color: #BCBCBC;
+}
+
+.filled{
+  height: 100%;
+  width: 45%;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.circle{
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+  background-color:black;
+}
