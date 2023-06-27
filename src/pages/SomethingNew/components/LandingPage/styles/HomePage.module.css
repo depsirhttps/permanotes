@@ -1,0 +1,42 @@
+.container{
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.container h1{
+  margin: 0 12px 0 0;
+  font-size: 40px;
+  color: black;
+  background-color: white;
+}
+
+.description{
+  color: dodgerblue;
+}
+
+.header{
+  /* background-color: grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: dodgerblue;
+  font-weight: bold;
+  margin: none;
+}
+
+.also{
+  font-size: 20px;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.also span{
+  color: black;
+}

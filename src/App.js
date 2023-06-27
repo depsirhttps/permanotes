@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MusicPlayer from './pages/MusicPlayer/MusicPlayer';
+import SomethingNew from './pages/SomethingNew/SomethingNew'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import PastProjects from './PastProjects';
 
@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <div className="content">
           <Routes>
-            <Route exact path="/" element={<MusicPlayer/>}/>
+            <Route exact path="/" element={<SomethingNew/>}/>
             <Route path="/pastprojects" element={<PastProjects/>}/>
           </Routes>
         </div>
